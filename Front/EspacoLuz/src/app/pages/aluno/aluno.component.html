@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="perfil-card">
+    <div class="perfil-foto">
+      <input type="file" #file (change)="onFileChange($event)" style="display:none;">
+      <img [src]="imagemURl" (click)="file.click()">
+    </div>
+    <div class="perfil-dados">
+      <p>{{request?.id}}</p>
+
+      <h1>{{request?.nome}}</h1>
+      <p>{{request?.telefone}}</p>
+      <p>{{request?.email}}</p>
+      <p>{{request?.endereco}}</p>
+      <p>{{request?.profissao}}</p>
+      <p>{{request?.nascimento | date:'shortDate' }}</p>
+      <div class="perfil-botoes">
+        <a routerLink="medidas/{{request?.id}}">ADD MEDIDAS</a>
+        <a routerLink="atualizar/{{request?.id}}">ATUALIZAR</a>
+      </div>
+      <a routerLink="/painel" class="voltar">Voltar</a>
+    </div>
+  </div>
+  <div class="tabela-alunos-card">
+    <table class="tabela-alunos">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Altura</th>
+          <th>Peso</th>
+          <th>Cintura</th>
+          <th>Busto</th>
+          <th>Biceps</th>
+          <th>Coxa</th>
+          <th>Panturrilha</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let med of responseMedidas?.value">
+          <td>{{med.data}}</td>
+          <td>{{med.altura}}cm</td>
+          <td>{{med.peso}}kg</td>
+          <td>{{med.cintura}}cm</td>
+          <td>{{med.busto}}cm</td>
+          <td>{{med.biceps}}cm</td>
+          <td>{{med.coxa}}cm</td>
+          <td>{{med.panturrilha}}cm</td>
+          <td> <button (click)="deletarMedida(med.id)"><img src="../../../assets/garbage.svg" alt=""> </button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,272 @@
+@import "../../../styles.scss";
+
+#home-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  #home-header-titulo {
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: absolute;
+    padding: 20px;
+    width: 550px;
+    height: 200px;
+
+    p {
+      font-size: trem(46);
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 3px;
+      color: var(--branco);
+      position: absolute;
+      top: 35px;
+    }
+
+    a {
+      background-color: var(--escuro);
+      font-size: trem(14);
+      font-weight: 400;
+      color: var(--branco);
+      padding: 10px 60px;
+      border-radius: 6px;
+      position: absolute;
+      left: 120px;
+      bottom: -20px;
+    }
+  }
+}
+
+.card-enfermeira-home {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  max-width: 1000px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--branco);
+  border-radius: 15px;
+
+  padding: 0px;
+
+  .card-enfermeira {
+    border-radius: 15px 0 0 15px;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px 0 0 15px;
+    }
+  }
+
+  .card-enfermeira-info {
+    background-color: var(--branco);
+    border-radius: 0 15px 15px 0;
+
+    h1 {
+      color: var(--escuro);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: trem(48);
+      margin-left: 70px;
+      margin-top: 50px;
+    }
+
+    span {
+      color: var(--preto);
+      font-size: trem(14);
+
+      font-family: Georgia, "Times New Roman", Times, serif;
+      margin-left: 70px;
+    }
+
+    p {
+      color: var(--preto);
+      font-size: trem(18);
+      margin-top: 40px;
+      margin-left: 70px;
+      margin-right: 70px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      margin-bottom: 90px;
+    }
+
+    a {
+      margin-left: 70px;
+    }
+  }
+}
+
+#faixa-home {
+  background-color: var(--escuro);
+  min-height: 350px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    width: 900px;
+  }
+
+  h1 {
+    font-size: trem(50);
+    color: var(--branco);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-top: 30px;
+  }
+}
+
+#pilates-home-info {
+  max-width: 1100px;
+  margin: auto;
+  max-height: 775px;
+
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    height: 775px;
+  }
+
+  h1 {
+    color: var(--escuro);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  p {
+    color: var(--preto);
+    font-size: trem(18);
+    margin-top: 40px;
+    margin-right: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 900px) {
+  #faixa-home {
+    background-color: var(--escuro);
+    min-height: 200px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+
+    img {
+      width: 500px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: trem(35);
+    }
+  }
+
+  #pilates-home-info {
+    margin: auto;
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .backgroud-img-joseph {
+      display: none;
+    }
+
+    .dados-joseph {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+  }
+
+  .card-enfermeira-home {
+    margin-right: 30px;
+    margin-left: 30px;
+    max-width: 1000px;
+    height: 450px;
+    display: grid;
+
+    .card-enfermeira-info {
+      background-color: var(--branco);
+      border-radius: 0 15px 15px 0;
+
+      h1 {
+        font-size: trem(40);
+      }
+
+      p {
+        font-size: trem(16);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .card-enfermeira-home {
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  #home-header {
+    #home-header-titulo {
+      width: 300px;
+      height: 150px;
+
+      p {
+        font-size: trem(22);
+      }
+
+      a {
+        font-size: trem(12);
+        left: 12px;
+      }
+    }
+  }
+
+  .card-enfermeira-home {
+    grid-template-columns: 1fr;
+
+    .card-enfermeira {
+      display: none;
+    }
+    .card-enfermeira-info {
+      border-radius: 15px;
+    }
+  }
+
+  #faixa-home {
+    img {
+      width: 400px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: trem(24);
+    }
+  }
+
+  #pilates-home-info {
+    margin-bottom: 190px;
+  }
+}

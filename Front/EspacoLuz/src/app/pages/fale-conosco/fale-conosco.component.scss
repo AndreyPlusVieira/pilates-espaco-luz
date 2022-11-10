@@ -1,0 +1,88 @@
+@import "../../../styles.scss";
+
+.fale-conosco-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--escuro);
+  height: 120px;
+
+  h1 {
+    font-size: trem(48);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: var(--branco);
+  }
+}
+
+.fale-conosco-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+  margin-bottom: 45px;
+
+  google-maps {
+    display: block;
+  }
+
+  h1 {
+    color: var(--preto);
+    font-size: trem(32);
+    font-family: poppins;
+    margin-left: 70px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-family: poppins;
+    margin-left: 70px;
+    margin-bottom: 25px;
+    color: var(--escuro);
+    margin-bottom: 60px;
+  }
+
+  .informacoes-formulario {
+    display: grid;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    input {
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid var(--escuro);
+    }
+    input::placeholder {
+      color: #c9c9c9;
+    }
+
+    a {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .fale-conosco-body {
+    grid-template-columns: 1fr;
+    .mapa {
+      grid-row: 2;
+    }
+
+    google-maps {
+      width: 500px;
+      margin: 20px auto;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .fale-conosco-body {
+    .maps {
+      height: 200px;
+      width: 150px;
+    }
+  }
+}

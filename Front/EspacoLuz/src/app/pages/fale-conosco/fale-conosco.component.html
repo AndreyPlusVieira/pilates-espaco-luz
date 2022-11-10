@@ -1,0 +1,32 @@
+<div class="fale-conosco-header">
+  <h1>FALE CONOSCO</h1>
+</div>
+<div class="fale-conosco-body container">
+  <div class="mapa">
+    <google-map width="500px" height="650px" [center]="center" [zoom]="zoom" (mapClick)="moveMap($event)" (mapMousemove)="move($event)">
+      <map-marker [position]="position"></map-marker>
+
+    </google-map>
+  </div>
+  <div class="informacoes">
+    <h1>Horário de funcionamento
+    </h1>
+    <p>Seg a Qui: 07h às 21h // Sex: 07h às 20h
+    </p>
+    <h1>Unidade
+      Lages - Centro</h1>
+    <p>Rua Irmã Laurinda, 301<br>
+      Centro – Lages - SC / CEP: 88501-250<br>
+      Tel: (49) 99900-0324 <br>
+      enf.giovannaluz@gmail.com
+    </p>
+    <div class="informacoes-formulario">
+      <input type="text" placeholder="Nome">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Telefone">
+      <input type="text" placeholder="Mensagem">
+      <a class="botao" href="/">Enviar</a>
+    </div>
+
+  </div>
+</div>

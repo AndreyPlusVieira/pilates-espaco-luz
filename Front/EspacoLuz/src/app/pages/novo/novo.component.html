@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+  <div class="container formulario">
+    <div class="formulario-individual nome">
+      <label>Nome</label>
+      <input class="is-invalid" [(ngModel)]="request.nome" [ngClass]="{'is-invalid': f.Nome.errors && f.Nome.touched}" type="text" formControlName="Nome" [ngClass]="">
+    </div>
+    <div class="formulario-individual telefone">
+      <label>Telefone</label>
+      <input class="is-invalid" [(ngModel)]="request.telefone" [ngClass]="{'is-invalid': f.Telefone.errors && f.Telefone.touched}" type="text" formControlName="Telefone">
+    </div>
+    <div class="formulario-individual email">
+      <label>Email</label>
+      <input class="is-invalid" [(ngModel)]="request.email" [ngClass]="{'is-invalid': f.Email.errors && f.Email.touched}" type="text" formControlName="Email">
+    </div>
+    <div class="formulario-individual endereco">
+      <label>Endereço</label>
+      <input class="is-invalid" [(ngModel)]="request.endereco" [ngClass]="{'is-invalid': f.Endereco.errors && f.Endereco.touched}" type="text" formControlName="Endereco">
+    </div>
+    <div class="formulario-individual profissao">
+      <label>Profissão</label>
+      <input class="is-invalid" [(ngModel)]="request.profissao" [ngClass]="{'is-invalid': f.Profissao.errors && f.Profissao.touched}" type="text" formControlName="Profissao">
+    </div>
+    <div class="formulario-individual nascimento">
+      <label>Nascimento</label>
+      <input class="is-invalid" bsDatepicker [bsConfig]="bsConfig" [(ngModel)]="request.nascimento" [ngClass]="{'is-invalid': f.Nascimento.errors && f.Nascimento.touched}" type="text" formControlName="Nascimento">
+    </div>
+
+
+    <button (click)="save()">GRAVAR</button>
+    <a routerLink="/painel" class="voltar">Voltar</a>
+  </div>
+</form>

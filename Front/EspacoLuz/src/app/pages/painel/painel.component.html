@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="header-alunos">
+    <div class="icone-alunos">
+      <img src="../../../assets/alunosIcon.svg" alt="">
+    </div>
+    <div class="titulo-alunos">
+      <h1>ALUNOS</h1>
+      <p>ESPAÇO LUZ - PILATES</p>
+    </div>
+  </div>
+  <div class="tabela-alunos-card">
+    <div class="tabela-alunos-botoes">
+      <div class="buscar-aluno ">
+        <form>
+          <input type="text" placeholder="Buscar" [(ngModel)]="filtroList" name="filtroList">
+        </form>
+      </div>
+      <div class="novo-aluno">
+        <button> <a routerLink="novo">Novo</a></button>
+      </div>
+    </div>
+    <table class="tabela-alunos">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th class="td-th-opcional">Telefone</th>
+          <th class="td-th-opcional">Email</th>
+          <th class="td-th-opcional">Plano</th>
+          <th align="center">Perfil</th>
+          <th align="center">Excluir</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="alunos && alunos">
+        <tr *ngFor="let aluno of alunosFiltrados ">
+          <td>{{aluno.nome }}</td>
+          <td class="td-th-opcional">{{aluno.telefone}}</td>
+          <td class="td-th-opcional">{{aluno.email}}</td>
+          <td class="td-th-opcional">Ativo</td>
+          <td align="center"> <a routerLink="/aluno/{{aluno.id}}"><img src=" ../../../assets/aluno.svg" alt=""></a> </td>
+          <td align="center"> <button (click)="deletarAluno(aluno.id)"><img src="../../../assets/garbage.svg" alt=""> </button> </td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="!alunos">
+        <tr>
+          <td coldspan="8">
+            <h4>Nenhum aluno encontrado</h4>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+@import "../../../styles.scss";
+
+img {
+  width: trem(200);
+}
+
+#superior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: trem(120);
+  align-items: center;
+  min-width: 100%;
+
+  img {
+    margin-left: trem(40);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: var(--preto);
+      padding: trem(5) trem(5);
+      white-space: nowrap;
+      // font-size: trem(16);
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 15px;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+#inferior {
+  display: flex;
+  background-color: var(--rosa);
+  height: trem(160);
+  justify-content: center;
+
+  img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  #superior {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    height: trem(150);
+    max-height: 100%;
+    align-items: center;
+    min-width: 100%;
+
+    .imagem-logo {
+      text-align: center;
+    }
+
+    img {
+      margin-top: trem(20);
+      margin-bottom: trem(20);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #superior {
+    font-size: 12px;
+  }
+}

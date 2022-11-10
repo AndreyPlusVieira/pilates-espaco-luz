@@ -1,0 +1,91 @@
+@import "../../../styles.scss";
+
+#footer-superior {
+  display: flex;
+  background-color: var(--rosa);
+  min-height: trem(315);
+  align-items: center;
+  color: var(--branco) !important;
+
+  #footer-superior-divicao {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 50px;
+
+    h3 {
+      font-size: trem(20);
+    }
+
+    #footer-superior-divicao-primeiro {
+      img {
+        max-width: 200px;
+      }
+    }
+    #footer-superior-divicao-segundo {
+      p {
+        margin-bottom: trem(8);
+      }
+    }
+    #footer-superior-divicao-terceiro {
+      li {
+        margin-bottom: trem(8);
+        text-align: center;
+
+        a {
+          color: var(--branco) !important;
+          font-weight: lighter;
+          font-size: trem(14);
+        }
+      }
+    }
+  }
+}
+
+#footer-inferior {
+  background-color: var(--escuro);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: var(--branco) !important;
+    font-size: trem(20);
+  }
+}
+
+@media (max-width: 800px) {
+  #footer-superior {
+    img {
+      width: 140px;
+    }
+    #footer-superior-divicao {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      justify-self: center;
+      gap: 60;
+      margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #footer-superior {
+    #footer-superior-divicao {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      #footer-superior-divicao-primeiro {
+        display: none;
+      }
+    }
+  }
+
+  #footer-inferior {
+    p {
+      font-size: trem(12);
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import "../../../styles.scss";
+
+.container-quem-somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+
+  .quem-somos-text {
+    margin: 30px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    margin-top: 35px;
+    color: var(--preto);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+  }
+
+  p {
+    margin-top: 30px;
+
+    color: var(--preto);
+    font-size: trem(18);
+    margin-right: 60px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+.container-quem-somos-dois {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 45px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    margin-top: 35px;
+    color: var(--preto);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+    margin-left: 40px;
+  }
+
+  p {
+    margin-top: 30px;
+
+    color: var(--preto);
+    font-size: trem(18);
+    margin-left: 40px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+.faixa-quem-somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+
+  img {
+    margin-top: 50px;
+    height: 80px;
+    fill: white;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: var(--branco);
+    font-family: POPPINS;
+    font-size: trem(25);
+  }
+
+  p {
+    color: var(--branco);
+    font-family: POPPINS;
+    font-size: trem(18);
+  }
+}
+
+.alinhar-componente {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.faixa {
+  background-color: var(--escuro);
+  height: 350px;
+}
+
+.quem-somos-porque {
+  margin: 45px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    margin-top: 65px;
+    color: var(--preto);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+  }
+
+  p {
+    margin-top: 30px;
+
+    color: var(--preto);
+    font-size: trem(18);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .faixa-quem-somos {
+    h2 {
+      font-size: trem(20);
+    }
+
+    p {
+      font-size: trem(14);
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .container-quem-somos {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 5px;
+    h1 {
+      margin-top: 5px;
+    }
+  }
+  .container-quem-somos-dois {
+    img {
+      display: none;
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .quem-somos-porque {
+    margin: 45px;
+    display: grid;
+    grid-template-columns: 1fr;
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .faixa {
+    height: 220px;
+  }
+  .faixa-quem-somos {
+    h2 {
+      font-size: trem(20);
+    }
+
+    p {
+      display: none;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .faixa {
+    min-height: 150px;
+  }
+  .faixa-quem-somos {
+    h2 {
+      display: none;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}

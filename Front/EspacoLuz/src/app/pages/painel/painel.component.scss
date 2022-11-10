@@ -1,0 +1,145 @@
+@import "../../../styles.scss";
+
+.header-alunos {
+  display: grid;
+  grid-template-columns: 120px auto;
+  justify-content: start;
+  align-items: center;
+
+  background-color: var(--escuro);
+  height: 115px;
+  padding: 20px 60px;
+  border-radius: 20px;
+  margin: 40px auto;
+
+  .icone-alunos img {
+    width: 100px;
+  }
+
+  .titulo-alunos {
+    color: var(--branco);
+    font-family: poppins;
+    margin-left: 20px;
+
+    h1 {
+      font-size: trem(44);
+    }
+  }
+}
+
+.tabela-alunos-card {
+  background-color: var(--branco);
+  display: grid;
+  border-radius: 20px;
+  padding: 30px;
+  justify-content: center;
+  margin-bottom: 45px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+  .tabela-alunos-botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .buscar-aluno {
+      input {
+        background-color: var(--fundo);
+        border-radius: 10px 0 0 10px;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+      }
+      input::placeholder {
+        color: var(--rosa);
+        font-family: poppins;
+      }
+      input:focus {
+        outline: none !important;
+        border: 1px solid var(--rosa);
+        box-shadow: 0 0 10px var(--fundo);
+      }
+    }
+
+    .novo-aluno {
+      button {
+        background-color: var(--rosa);
+        border-radius: 0 10px 10px 0;
+
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+      }
+
+      a {
+        color: var(--branco);
+        font-family: poppins;
+        font-size: trem(18);
+        padding: 10px 220px;
+      }
+    }
+  }
+
+  .tabela-alunos {
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 1000px;
+
+    thead tr {
+      background-color: var(--escuro);
+      color: var(--branco);
+      text-align: left;
+      font-weight: bold;
+      font-family: roboto;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 21px;
+    }
+
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    td {
+      color: var(--preto);
+      padding: 8px 15px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .tabela-alunos {
+    min-width: 300px !important;
+
+    .td-th-opcional {
+      display: none;
+    }
+
+    button {
+      padding: 10px 50px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  a {
+    padding: 10px 170px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  a {
+    padding: 10px 120px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  a {
+    padding: 10px 70px !important;
+  }
+}

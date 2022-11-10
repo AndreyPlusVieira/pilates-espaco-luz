@@ -1,0 +1,73 @@
+@import "../../../styles.scss";
+
+.sub-header-pilates img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 45px;
+}
+
+.container-pilates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 45px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    color: var(--preto);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+  }
+
+  p {
+    margin-top: 45px;
+
+    color: var(--preto);
+    font-size: trem(18);
+    margin-right: 40px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+.container-pilates-dois {
+  margin-top: 45px;
+  margin-bottom: 45px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    color: var(--preto);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: trem(48);
+  }
+
+  p {
+    margin-top: 45px;
+
+    color: var(--preto);
+    font-size: trem(18);
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-pilates {
+    margin: 20px 50px;
+    grid-template-columns: 1fr;
+  }
+  .container-pilates-dois {
+    margin: 20px 50px;
+  }
+  .imagem-texto {
+    display: none;
+  }
+}

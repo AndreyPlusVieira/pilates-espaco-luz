@@ -1,0 +1,22 @@
+<div class="body-login">
+  <form>
+
+    <div class="container-login">
+      <div class="container-login-img">
+        <img src="../../../assets/LoginImg.png" alt="">
+      </div>
+      <form [formGroup]="form" class="container-login-forms">
+        <h2>BEM VINDO</h2>
+        <h1>REGISTRAR</h1>
+        <input type="text" placeholder="Email" [ngClass]="{'is-invalid': f.Email.errors && f.Email.touched}" formControlName="Email">
+        <input type="password" placeholder="Senha" [ngClass]="{'is-invalid': f.Senha.errors && f.Senha.touched}" formControlName="Senha">
+        <input type="password" placeholder="Confirme Senha" [ngClass]="{'is-invalid': f.ConfirmeSenha.errors && f.ConfirmeSenha.touched}" formControlName="ConfirmeSenha">
+        <div class="botoes-login">
+          <a class="login-entrar" routerLink="/">REGISTRAR</a>
+          <a class="login-registrar" routerLink="/login">LOGIN</a>
+        </div>
+      </form>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,105 @@
+@import "../../../styles.scss";
+
+a {
+  cursor: pointer;
+}
+
+.body-medidas {
+  display: flex;
+  justify-content: center;
+  .container-medidas {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+
+    .container-medidas-img {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--rosa);
+      border-radius: 100px 0 0 100px;
+
+      img {
+        width: 270px;
+        object-fit: cover;
+      }
+    }
+
+    .container-medidas-forms {
+      background-color: var(--branco);
+      border-radius: 0 100px 100px 0;
+
+      a:last-child {
+        margin-bottom: 40px;
+      }
+
+      label {
+        font-family: poppins;
+        color: var(--escuro);
+        margin-left: 95px;
+      }
+
+      h2 {
+        font-family: poppins;
+        font-size: trem(20);
+        color: var(--rosa);
+        margin-left: 40px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-family: poppins;
+        font-size: trem(45);
+        color: var(--rosa);
+        text-align: center;
+        margin-top: 90px;
+      }
+
+      input {
+        display: block;
+        background-color: var(--fundo);
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+
+      input::placeholder {
+        color: var(--rosa);
+        font-family: poppins;
+      }
+
+      input:focus {
+        outline: none !important;
+        border: 1px solid var(--rosa);
+        box-shadow: 0 0 10px var(--fundo);
+      }
+
+      .botoes-medidas {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        .medidas-entrar {
+          background-color: var(--rosa);
+          font-size: trem(18);
+          font-family: poppins;
+          color: var(--branco);
+          padding: 10px 50px;
+          border-radius: 80px;
+          margin-bottom: 20px;
+        }
+        .medidas-registrar {
+          color: var(--rosa);
+          font-size: trem(14);
+          font-family: poppins;
+        }
+      }
+    }
+  }
+}

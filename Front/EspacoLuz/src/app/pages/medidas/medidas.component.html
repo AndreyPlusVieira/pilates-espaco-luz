@@ -1,0 +1,34 @@
+<div class="body-medidas">
+  <form>
+
+    <div class="container-medidas">
+      <div class="container-medidas-img">
+        <img src="../../../assets/MedidasEspacoLuz.svg" alt="">
+      </div>
+      <div class="container-medidas-forms">
+        <h2>MEDIDAS</h2>
+        <form>
+          <label>Altura</label>
+          <input type="text" [(ngModel)]="request.altura" name="altura" placeholder="Centimetros">
+          <label>Peso</label>
+          <input type="text" [(ngModel)]="request.peso" name="peso" placeholder="Quilogramas">
+          <label>Cintura</label>
+          <input type="text" [(ngModel)]="request.cintura" name="cintura" placeholder="Centimentros">
+          <label>Busto</label>
+          <input type="text" [(ngModel)]="request.busto" name="busto" placeholder="Centimentros">
+          <label>Biceps</label>
+          <input type="text" [(ngModel)]="request.biceps" name="biceps" placeholder="Centimentros">
+          <label>Coxa</label>
+          <input type="text" [(ngModel)]="request.coxa" name="coxa" placeholder="Centimentros">
+          <label>Panturrilha</label>
+          <input type="text" [(ngModel)]="request.panturrilha" name="panturrilha" placeholder="Centimentros">
+        </form>
+        <div class="botoes-medidas">
+          <button class="medidas-entrar" (click)="save()">ADICIONAR</button>
+          <a class="medidas-registrar" (click)="voltar()">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
